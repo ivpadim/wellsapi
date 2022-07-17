@@ -14,7 +14,8 @@ if (app.Environment.IsDevelopment())
 app.MapGet("/wells/{jobId}", (string jobId) =>
 {
     var cacheKey = $"WELLS_COUNT_{jobId}";
-    
+
+    //Return random number and store it in cache
     return Results.Ok(-1);
 })
 .Produces<int>(StatusCodes.Status200OK);
